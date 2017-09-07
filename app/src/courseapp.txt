@@ -1,0 +1,89 @@
+/*
+
+大家好我是方正，今天我来给大家用直播编程如何？
+
+这张页面好无聊啊！我们加一点小东西
+
+*/
+
+*{
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
+}
+
+/* 啊？没效果么？背景变一下颜色可好？*/
+
+html {
+  
+  /* 
+  3，
+  2，
+  1 */
+  background: rgb(0,43,54); 
+}
+.token.comment       { color: white }
+
+/* 哈哈！厉害吧！？*/
+
+.wholeWrap{
+  height:500px;
+  width:100%;
+  left:0;
+}
+
+/* 哈哈，你的眼睛是不是要瞎了?那字体也变一下呗? */
+
+.wholeWrap:not(:empty){
+  color: rgb(222,222,222); 
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  border: 1px solid #ccc;
+  max-height: 44.6%;
+  width: 35%;
+  font-size: 14px;
+  font-family: monospace;
+  padding: 10px 10px 20px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+.wholeWrap {
+  -webkit-transform: translateX(150%);
+}
+/* 
+
+yoyoyoyo，怎样？抱歉让你的眼睛损伤啦～ 
+接下来我们玩一点高端的「代码高亮」！
+
+*/
+
+
+.token.comment       { color: #857F6B; font-style: italic; }
+.token.selector      { color: #E69F0F; }
+.token.property      { color: #64D5EA; }
+.token.punctuation   { color: #64D5EA; }
+.token.function      { color: #BE84F2; }
+
+
+/*
+
+哈哈，是不是非常不错？
+接下来我们写一份简历好不好？
+
+首先我们先准备一个打字框！
+*/
+
+.resume{
+  position:fixed;
+  top:0;
+  padding: .5em;  margin: .5em;
+  width: 40vw; height:500px; 
+  border: 1px solid;
+  background: white; color: #222;
+  overflow: auto;
+}
+
+/*
+好,我们立马开写！
+*/
