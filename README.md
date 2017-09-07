@@ -1,5 +1,9 @@
 # React-awesome-resume
 
+项目预览
+-------
+- [预览地址](http://fit.9uhxir.top/)
+
 
 如何开始？
 -------
