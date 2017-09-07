@@ -74,7 +74,7 @@ export default class Content extends React.Component {
                     //获取DOM节点，其实这里不应该用react去搞Dom节点，不过算啦，用state比较好
                     ref={node => this.contentNode = node}
                 >
-                {/* 值得注意的是，当你设置dangerouslySetInnerHTML的时候，div中间不能有任何东西，包括空格. */}
+                    {/* 值得注意的是，当你设置dangerouslySetInnerHTML的时候，div中间不能有任何东西，包括空格. */}
                     <div dangerouslySetInnerHTML={{ __html: this.state.styleText }}></div>
                     <style dangerouslySetInnerHTML={{ __html: this.state.DOMStyleText }}></style>
                 </div>
@@ -82,6 +82,10 @@ export default class Content extends React.Component {
                     className='resume'
                     ref={node => this.resumeNode = node}
                     dangerouslySetInnerHTML={{ __html: this.state.DOMResumeText }}>
+                </div>
+                <div id="bot" style={{padding:'10px',textAlign:'center',marginTop:'100px',fontSize:'10px',color:'rgba(150, 150, 150, 0.8)'}}>
+                    Powered by
+                    <a href="https://www.zhihu.com/people/fang-zheng-3-34/activities">知乎，方正</a>
                 </div>
             </div>
         )

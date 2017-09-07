@@ -15,7 +15,6 @@ body {
 /*  诶？没有效果吗？别急 */
 .resume {
   -webkit-transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
-  transform:rotateX(0deg) rotateY(190deg) rotateZ(180deg);
 }
 
 /*  是不是很帅？？？ */

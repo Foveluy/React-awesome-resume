@@ -84,9 +84,9 @@ html {
   position:fixed;
   top:0;
   padding: .5em;  margin: .5em;
+  background: white; color: #222;
   width: 40vw; height:500px; 
   border: 1px solid;
-  background: white; color: #222;
   overflow: auto;
   color: rgb(222,222,222); 
   background: rgb(48, 48, 48);
