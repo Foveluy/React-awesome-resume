@@ -4,7 +4,7 @@
 * 首先,先来添加一下全局的动画效果！
 */
 
-*{
+html{
   -webkit-transition: all 1.3s;
   transition: all 1.3s;
 }
