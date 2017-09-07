@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import CourseApp from './CourseApp';
-import store from './Store.js';
+import App from './App';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <CourseApp />
-    </Provider>,
+    <div>
+        <App />
+    </div>,
     document.getElementById('root')
 );

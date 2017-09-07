@@ -9,15 +9,31 @@
 */
 body {
   -webkit-perspective: 1000px;
+  perspective:1000px;
 }
 
+/*  诶？没有效果吗？别急 */
+.resume {
+  -webkit-transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
+  transform:rotateX(0deg) rotateY(190deg) rotateZ(180deg);
+}
+
+/*  是不是很帅？？？ */
 .resume {
   -webkit-transform: rotateY(10deg);
   -webkit-transform-origin: left;
+  transform:rotateY(10deg);
+  -webkit-transform-origin:rotateY(10deg);
 }
 
 .wholeWrap {
   -webkit-transform: translateX(150%) rotateY(-10deg);
   -webkit-transform-origin: right;
+  transform:translateX(150%) rotateY(-10deg);
+  transform-origin: right;
   max-height: 94.5%;
 }
+
+/* 
+本次代码直播结束啦！喜欢的话，记得给我项目一些星星哦！
+*/
