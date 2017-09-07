@@ -1,4 +1,4 @@
-/*
+/* Inspired by http://strml.net  , https://jirengu-inc.github.io/animating-resume/dist/ 
 * 大家好,我是方正，今天我来给大家直播编程如何？
 * 这张页面好无聊啊！我们加一点小东西如何？
 * 首先,先来添加一下全局的动画效果！
