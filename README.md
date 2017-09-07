@@ -1,7 +1,7 @@
 # React-awesome-resume
 
 
-###如何开始？
+#如何开始？
 ```
 git clone git@github.com:215566435/React-awesome-resume.git
 cd React-awesome-resume
@@ -14,7 +14,7 @@ npm run dev
 http://127.0.0.1:8080/[http://127.0.0.1:8080/]
 ```
 
-###如何生成生产环境项目进行部署？？
+#如何生成生产环境项目进行部署？？
 
 ```
 git clone git@github.com:215566435/React-awesome-resume.git
@@ -25,7 +25,8 @@ npm run build
 ```
 
 然后你复制目录build下的
+```
 - bundle.js
 - index.html
-
+```
 到你的服务器中去
