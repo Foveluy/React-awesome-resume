@@ -26,7 +26,7 @@ body {
   -webkit-transform-origin:rotateY(10deg);
 }
 
-.wholeWrap {
+.workArea {
   -webkit-transform: translateX(150%) rotateY(-10deg);
   -webkit-transform-origin: right;
   transform:translateX(150%) rotateY(-10deg);
