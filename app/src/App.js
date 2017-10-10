@@ -1,4 +1,4 @@
-import React from 'react'
+import React from '../Luy'
 const style = require("raw-loader!./style1.txt") //注意使用raw-loader解析字符串
 const style2 = require("raw-loader!./style2.txt")
 const resume = require("raw-loader!./resume.txt")
@@ -17,7 +17,8 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
                 styleText: html,
                 DOMStyleText: origin
             })
-            that.contentNode.scrollTop = that.contentNode.scrollHeight
+            
+            that.contentNode[0].scrollTop = that.contentNode[0].scrollHeight
         } else if (nodeName == 'resume') {
             const originResume = that.state.resumeText + char
             const converter = new showdown.Converter()
@@ -26,7 +27,7 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
                 resumeText: originResume,
                 DOMResumeText: markdownResume
             })
-            that.resumeNode.scrollTop = that.resumeNode.scrollHeight
+            that.resumeNode[0].scrollTop = that.resumeNode[0].scrollHeight
         }
         /* 这里是控制，当遇到中文符号的？，！的时候就延长时间  */
         if (char == "？" || char == "，" || char == '！') {
@@ -40,8 +41,9 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
 
 const writeTo = async (that, nodeName, index, text) => {
     /* 一个字一个字的读咯,这样会获得丝滑柔顺的打字效果... */
-    let char = text.slice(index, index + 1)
-    index += 1
+    let speed = 1
+    let char = text.slice(index, index + speed)
+    index += speed
     if (index > text.length) {
         return//如果字打完了，就返回了
     }
@@ -58,8 +60,11 @@ export default class Content extends React.Component {
             resumeText: ``,
             DOMResumeText: ``
         }
+        this.contentNode = document.getElementsByClassName('workArea')
+        this.resumeNode = document.getElementsByClassName('resume')
     }
     componentDidMount() {
+        
         (async (that) => {//这里的这个函数中文名叫做「定义即运行函数」，其实就是定义了马上运行。
             await writeTo(that, 'workArea', 0, style)
             await writeTo(that, 'resume', 0, resume)
@@ -71,16 +76,12 @@ export default class Content extends React.Component {
             <div>
                 <div
                     className='workArea'
-                    //获取DOM节点，其实这里不应该用react去搞Dom节点，不过算啦，用state比较好
-                    ref={node => this.contentNode = node}
                 >
-                    {/* 值得注意的是，当你设置dangerouslySetInnerHTML的时候，div中间不能有任何东西，包括空格. */}
                     <div dangerouslySetInnerHTML={{ __html: this.state.styleText }}></div>
                     <style dangerouslySetInnerHTML={{ __html: this.state.DOMStyleText }}></style>
                 </div>
                 <div
                     className='resume'
-                    ref={node => this.resumeNode = node}
                     dangerouslySetInnerHTML={{ __html: this.state.DOMResumeText }}>
                 </div>
                 <div id="bot" style={{padding:'10px',textAlign:'center',marginTop:'100px',fontSize:'10px',color:'rgba(150, 150, 150, 0.8)'}}>

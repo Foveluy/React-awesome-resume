@@ -1,12 +1,14 @@
-/* Inspired by http://strml.net  , https://jirengu-inc.github.io/animating-resume/dist/ 
-* 大家好,我是方正，今天我来给大家直播编程如何？
+/* 本项目由一个类React框架Luy制造！
+*
+* 大家好,我是方正，今天的代码直播跟上次有点不一样呢，是用我自己写的框架Luy制作的！
+*
 * 这张页面好无聊啊！我们加一点小东西如何？
 * 首先,先来添加一下全局的动画效果！
 */
 
 *{
-  -webkit-transition: all 1.3s;
-  transition: all 1.3s;
+  -webkit-transition: all .8s;
+  transition: all .8s;
 }
 
 /* 啊？没效果么？背景变一下颜色可好？*/
