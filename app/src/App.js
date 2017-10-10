@@ -63,7 +63,6 @@ export default class Content extends React.Component {
 
     }
     componentDidMount() {
-        
         (async (that) => {//这里的这个函数中文名叫做「定义即运行函数」，其实就是定义了马上运行。
             await writeTo(that, 'workArea', 0, style)
             await writeTo(that, 'resume', 0, resume)
