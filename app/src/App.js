@@ -18,7 +18,7 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
                 DOMStyleText: origin
             })
             
-            that.contentNode[0].scrollTop = that.contentNode[0].scrollHeight
+            that.contentNode.scrollTop = that.contentNode.scrollHeight
         } else if (nodeName == 'resume') {
             const originResume = that.state.resumeText + char
             const converter = new showdown.Converter()
@@ -27,7 +27,7 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
                 resumeText: originResume,
                 DOMResumeText: markdownResume
             })
-            that.resumeNode[0].scrollTop = that.resumeNode[0].scrollHeight
+            that.resumeNode.scrollTop = that.resumeNode.scrollHeight
         }
         /* 这里是控制，当遇到中文符号的？，！的时候就延长时间  */
         if (char == "？" || char == "，" || char == '！') {
@@ -41,7 +41,7 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
 
 const writeTo = async (that, nodeName, index, text) => {
     /* 一个字一个字的读咯,这样会获得丝滑柔顺的打字效果... */
-    let speed = 1
+    let speed = 10
     let char = text.slice(index, index + speed)
     index += speed
     if (index > text.length) {
@@ -60,8 +60,7 @@ export default class Content extends React.Component {
             resumeText: ``,
             DOMResumeText: ``
         }
-        this.contentNode = document.getElementsByClassName('workArea')
-        this.resumeNode = document.getElementsByClassName('resume')
+
     }
     componentDidMount() {
         
@@ -76,13 +75,16 @@ export default class Content extends React.Component {
             <div>
                 <div
                     className='workArea'
+                    ref={(node)=>{this.contentNode = node}}
                 >
                     <div dangerouslySetInnerHTML={{ __html: this.state.styleText }}></div>
                     <style dangerouslySetInnerHTML={{ __html: this.state.DOMStyleText }}></style>
                 </div>
                 <div
                     className='resume'
-                    dangerouslySetInnerHTML={{ __html: this.state.DOMResumeText }}>
+                    dangerouslySetInnerHTML={{ __html: this.state.DOMResumeText }}
+                    ref={(node)=>{this.resumeNode = node}}
+                    >
                 </div>
                 <div id="bot" style={{padding:'10px',textAlign:'center',marginTop:'100px',fontSize:'10px',color:'rgba(150, 150, 150, 0.8)'}}>
                     Powered by
