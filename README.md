@@ -2,7 +2,7 @@
 
 项目预览
 -------
-- [预览地址](http://fit.9uhxir.top/)
+- [预览地址](http://htmlpreview.github.io/?https://github.com/215566435/React-awesome-resume/blob/master/build/index.html)
 
 
 如何开始？
