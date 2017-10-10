@@ -41,7 +41,7 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
 
 const writeTo = async (that, nodeName, index, text) => {
     /* 一个字一个字的读咯,这样会获得丝滑柔顺的打字效果... */
-    let speed = 10
+    let speed = 1
     let char = text.slice(index, index + speed)
     index += speed
     if (index > text.length) {
