@@ -1,5 +1,5 @@
-import React from '../Luy';
-import ReactDOM from '../Luy';
+import React from 'luy';
+import ReactDOM from 'luy';
 import App from './App';
 
 ReactDOM.render(

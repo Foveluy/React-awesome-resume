@@ -1,4 +1,4 @@
-import React from '../Luy'
+import React from 'luy'
 const style = require("raw-loader!./style1.txt") //注意使用raw-loader解析字符串
 const style2 = require("raw-loader!./style2.txt")
 const resume = require("raw-loader!./resume.txt")
@@ -87,7 +87,7 @@ export default class Content extends React.Component {
                 </div>
                 <div id="bot" style={{padding:'10px',textAlign:'center',marginTop:'100px',fontSize:'10px',color:'rgba(150, 150, 150, 0.8)'}}>
                     Powered by
-                    <a href="https://www.zhihu.com/people/fang-zheng-3-34/activities">知乎，方正</a>
+                    <a href="https://www.zhihu.com/people/fang-zheng-3-34/activities"> 知乎，方正</a>
                 </div>
             </div>
         )
