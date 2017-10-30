@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
-    "luy": "^1.0.1",
+    "luy": "^1.1.3",
     "prismjs": "^1.6.0",
     "raw-loader": "^0.5.1",
     "react": "^15.6.2",

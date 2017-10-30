@@ -74,7 +74,7 @@ export default class Content extends React.Component {
             <div>
                 <div
                     className='workArea'
-                    ref={(node)=>{this.contentNode = node}}
+                    ref={(node) => { this.contentNode = node }}
                 >
                     <div dangerouslySetInnerHTML={{ __html: this.state.styleText }}></div>
                     <style dangerouslySetInnerHTML={{ __html: this.state.DOMStyleText }}></style>
@@ -82,10 +82,10 @@ export default class Content extends React.Component {
                 <div
                     className='resume'
                     dangerouslySetInnerHTML={{ __html: this.state.DOMResumeText }}
-                    ref={(node)=>{this.resumeNode = node}}
-                    >
+                    ref={(node) => { this.resumeNode = node }}
+                >
                 </div>
-                <div id="bot" style={{padding:'10px',textAlign:'center',marginTop:'100px',fontSize:'10px',color:'rgba(150, 150, 150, 0.8)'}}>
+                <div id="bot" style={{ padding: '10px', textAlign: 'center', marginTop: '100px', fontSize: '10px', color: 'rgba(150, 150, 150, 0.8)' }}>
                     Powered by
                     <a href="https://www.zhihu.com/people/fang-zheng-3-34/activities"> 知乎，方正</a>
                 </div>
