@@ -1,5 +1,10 @@
 # React-awesome-resume
 
+特色
+-----
+本网页由自制类React框架Luy制作，除了react的babel之外，Luy核心代码完全是由自己写成（你可以无缝切回react
+
+
 项目预览
 -------
 - [预览地址](http://htmlpreview.github.io/?https://github.com/215566435/React-awesome-resume/blob/master/build/index.html)
